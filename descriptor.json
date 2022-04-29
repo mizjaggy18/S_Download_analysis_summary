@@ -1,6 +1,6 @@
 {
   "name": "Download_analysis_summary",
-  "description": "To download annotations summary from job (algorithm) analysis",
+  "description": "To download annotations summary from manual or job (algorithm) analysis",
   "schema-version": "cytomine-0.1",
   "container-image": {
     "image": "mizjaggy18/s_download_analysis_summary",
@@ -72,7 +72,7 @@
       "name": "Cytomine Job ID",
       "description": "Job ID of analysis to be downloaded",
       "set-by-server": false,
-      "optional": false,      
+      "optional": true,      
       "type": "Domain",
       "uri": "/api/job.json?project=$currentProject$",
       "uri-sort-attribute": "softwareDate",
@@ -85,7 +85,7 @@
       "name": "Cytomine User ID",
       "description": "User ID of analysis to be downloaded",
       "set-by-server": false,
-      "optional": false,
+      "optional": true,
       "type": "Number"
     },
     {
