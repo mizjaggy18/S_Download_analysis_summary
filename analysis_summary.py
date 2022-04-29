@@ -69,8 +69,8 @@ def run(cyto_job, parameters):
         f.write("ImageID;ProjectID;JobID;TotalTerm1;TotalTerm2;TotalTerm3;TotalTerm4;TotalTerm5 \n")
 
         id_project=project.id
-        id_job=parameters.cytomine_id_job
-        id_user = parameters.cytomine_id_user
+#         id_job=parameters.cytomine_id_job
+#         id_user=parameters.cytomine_id_user
         
         #Go over images
         for id_image in list_imgs2:
@@ -80,9 +80,9 @@ def run(cyto_job, parameters):
             annotations.project = id_project
             annotations.image = id_image            
             
-            if parameters.id_job != 0:
-                    annotations.job = id_job
-                    annotations.user = id_user
+            if parameters.cytomine_id_job != 0:
+                    annotations.job = parameters.cytomine_id_job
+                    annotations.user = parameters.cytomine_id_user
                     
             annotations.showAlgo = True
             annotations.showWKT = True
