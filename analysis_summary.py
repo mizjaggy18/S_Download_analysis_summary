@@ -78,9 +78,12 @@ def run(cyto_job, parameters):
 
             annotations = AnnotationCollection()        
             annotations.project = id_project
-            annotations.image = id_image
-            annotations.job = id_job
-            annotations.user = id_user
+            annotations.image = id_image            
+            
+            if parameters.id_job != 0:
+                    annotations.job = id_job
+                    annotations.user = id_user
+                    
             annotations.showAlgo = True
             annotations.showWKT = True
             annotations.showMeta = True
